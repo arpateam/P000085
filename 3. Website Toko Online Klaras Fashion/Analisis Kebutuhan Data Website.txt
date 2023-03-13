@@ -1,0 +1,133 @@
+Analisis Kebutuhan Data Website
+
+1. HASIL MEETING DENGAN KLIEN
+	a) Bikin web toko online fashion
+	b) DATA WEBSITE
+		- Nama Usaha: Klaras - As Gorgeous As You
+		- Logo Usaha: (https://www.canva.com/design/DAFXPJT29_Y/AxNUVOxRoOwoVM3J6b1qsQ/edit?ui=eyJGIjp7fX0&analyticsCorrelationId=f0467349-eddc-4e8a-bea1-3219d1cfb296#)
+		- Alamat Lengkap: F3H5+F9R, Pandan Rekmo, Mulwo Kidul, Wuwuharjo, Kec. Kajoran, Kabupaten Magelang, Jawa Tengah 56163 (https://goo.gl/maps/UD6sV38YwggMFgTV8)
+		- Informasi kontak (hny melayani chat WA): 0856-4044-7401
+		- Informasi medsos:
+			> Instagram
+			> TikTok
+			> Shopee
+		- Produk
+			> Gambar
+			> Nama Produk
+			> Deskripsi
+			> Harga
+			> Diskon
+		- Pilihan warna utk website: Pastel (https://offeo.com/learn/pastel-colors-palette#toc--11-mini-pastel-pops)
+		- Pilihan domain: www.klaras.co.id
+		- Halaman:
+			> New Arrivals
+			> Best Seller
+			> Sale
+			> All Products
+			> Category
+			> Rekening
+			> Tentang Kami
+			> Kontak Kami
+			> How to Order
+			> Blog
+			> Offline Store
+
+2. ANALSISI KEBUTUHAN WEBSITE
+	a) Kebutuhan Utama
+		- Contoh Web Yang Akan Dibuat: https://www.hos-id.com & https://hijabchic.co.id
+		- Nama Web: Klaras
+		- Slogan: As Gorgeous As You
+	b) Kebutuhan Fitur: Website Toko Online
+	c) Kebutuhan Teknologi
+		- Menggunakan Bootstrtap 5
+		- FontAwesome 6
+		- AOS
+	d) Warna:
+		- Indian Red #E9BBB5
+		- Light Steel Blue #AAD9CD
+		- Light Khaki #E8D595
+
+3. ANALISIS KEBUTUHAN HALAMAN WEBSITE
+	a) Halaman Utama
+		- Home
+			> Slider (Banner)
+			> Sale
+			> Category
+			> New Arrivals
+			> Best Seller
+		- New Arrivals
+		- Best Seller
+		- Sale
+		- All Product
+		- Category
+		- Information
+			> How to Order
+			> Payment Method
+			> Blog
+			> About Us
+
+	b) Halaman Portal Admin
+		- Login
+		- Dashboard
+		- Produk
+			> Kategori Produk
+			> Daftar Produk
+		- Payment Method
+			> Daftar Payment Method
+		- Berita
+			> Daftar Berita
+		- HALAMAN & SEO
+			> Home
+			> New Arrivals
+			> Best Seller
+			> Sale
+			> All Product
+			> Category
+			> How to Order
+			> Payment Method
+			> Blog
+			> About Us
+
+4. ANALISIS KEBUTUHAN DATABASE
+	a) data_admin
+	b) pengaturan
+	c) sub_sitemap
+	d) sitemap
+	e) page
+	e) berita
+		> id_berita
+		> judul
+		> gambar
+		> deskripsi
+		> slug
+		> keywords
+		> description
+		> view
+		> tgl_terbit
+		> tgl_update
+		> id_sitemap
+	e) kat_produk
+		> id_kat_produk
+		> judul
+		> gambar
+		> slug
+		> keywords
+		> description
+		> tgl_update
+		> id_sitemap
+	e) produk
+		> id_produk
+		> id_kat_produk
+		> judul
+		> status (Sale, None)
+		> sub_harga
+		> diskon
+		> harga
+		> gambar
+		> deskripsi
+		> slug
+		> keywords
+		> description
+		> tgl_update
+		> view
+		> id_sitemap

@@ -1,0 +1,77 @@
+.image-zoom-on-hover:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-sizing: border-box !important;
+}
+#return-to-top {
+  position: fixed;
+  background-color: #ced4da;
+  text-decoration: none;
+  z-index: 1070;
+  bottom: 2.5%;
+  left: 49%;
+  padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+#return-to-top i {
+  color: #3c4858;
+}
+#return-to-top:hover {
+  transform: rotate(45deg);
+  background-color: #0d6efd;
+  transition: 0.3s;
+}
+#return-to-top:hover i {
+  transform: rotate(-45deg);
+  color: #f8f9fa;
+  transition: 0.6s;
+}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .dropdown-menu-end{
+    right:0;
+    left: auto; 
+  }
+  .navbar .nav-item .dropdown-menu{
+    display:block;
+    opacity: 0;
+    visibility: hidden;
+    transition:.3s;
+    margin-top:0;
+  }
+  .navbar .nav-item:hover .nav-link{ }
+  .navbar .dropdown-menu.fade-down{
+    top:80%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+  }
+  .navbar .dropdown-menu.fade-up{
+    top:180%;
+  }
+  .navbar .nav-item:hover .dropdown-menu{
+    transition: .3s;
+    opacity:1;
+    visibility:visible;
+    top:100%; 
+    transform: rotateX(0deg);
+  }
+} 
+/* ============ desktop view .end// ============ */
+
+
+/*TAMBAHKAN CSS ANDA DI BAWAH INI!!!*/
+
+.vl {
+  border-left: 1px solid #d4d2cf;
+  height: 100%;
+}

@@ -1,0 +1,3 @@
+MELAKUKAN TESTING WEBSITE
+- Setelah saya melakukan testing website (baik untuk tampilan desktop maupun untuk tampilan mobile) ternyata tidak ada masalah yang berarti. Semuanya berjalan dengan normal, artinya website ini sudah responsive di semua perangkat!
+- Website Portal Adminnya juga sudah normal

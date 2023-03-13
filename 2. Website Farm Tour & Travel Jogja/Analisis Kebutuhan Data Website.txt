@@ -1,0 +1,52 @@
+Analisis Kebutuhan Data Website
+
+1. HASIL MEETING DENGAN KLIEN
+	a) Bikin web tour & travel farm tour jogja
+	b) DATA WEBSITE
+		- Nama Usaha: Farm Tour Jogja
+		- Logo Usaha: (Belum Di Buat)
+		- Alamat Lengkap: Jl. Jambidan No.41, RT 3, Dhuku, Jl. Jambidan No.41, Padukuhan Duku, Jambidan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55195 (https://goo.gl/maps/C13SS92E9Le5MLme7)
+		- Informasi kontak (hny melayani chat WA): 0882-1674-1519
+		- Informasi medsos:
+			> Instagram: https://www.instagram.com/iqyputra/
+			> Facebook: https://www.facebook.com/profile.php?id=100085167225377
+		- Produk
+			> Gambar
+			> Nama Produk
+			> Ket
+			> Harga
+			> Fasiitas 1
+			> Fasilitas 2
+			> Fasilitas 3
+		- Pilihan warna utk website: (Sesuaikan dengan warna logo saja)
+		- Pilihan domain: www.farmtourjogja.com
+		- Halaman:
+			> Landingpage saja
+		- Target Pasar:
+			> Kalimantan, Surabaya, Jakarta, Bandung
+
+2. ANALSISI KEBUTUHAN WEBSITE
+	a) Kebutuhan Utama
+		- Contoh Web Yang Akan Dibuat: https://suksesrentcar.com
+		- Nama Web: Farm Tour Jogja
+		- Slogan: -
+	b) Kebutuhan Fitur: Buat landingpage saja
+	c) Kebutuhan Teknologi
+		- Menggunakan Bootstrtap 5
+		- FontAwesome 6
+		- AOS
+	d) Warna: Sesuaikan dengan warna logo
+
+3. ANALISIS KEBUTUHAN HALAMAN WEBSITE
+	a) Halaman Utama
+		- Home
+			> Slider (Breaking News)
+			> Berita Terbaru
+			> Berita Populer (Paling banyak di baca)
+
+4. ANALISIS KEBUTUHAN DATABASE
+	a) data_admin
+	b) pengaturan
+	c) sub_sitemap
+	d) sitemap
+	e) produk

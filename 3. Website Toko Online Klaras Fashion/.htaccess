@@ -1,0 +1,67 @@
+## Turn on rewrite engine
+RewriteEngine on
+Options -Indexes +FollowSymLinks
+
+# Remove trailing slash from non-filepath urls
+#RewriteCond %{REQUEST_URI} /(.+)/$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ https://www.klaras.co.id/%1 [R=301,L]
+
+# Include trailing slash on directory 
+#RewriteCond %{REQUEST_URI} !(.+)/$
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^(.+)$ https://www.klaras.co.id/$1/ [R=301,L]
+
+# Force HTTPS and WWW 
+#RewriteCond %{HTTP_HOST} !^www\.(.*)$ [OR,NC]
+#RewriteCond %{https} off  
+#RewriteRule ^(.*)$ https://www.klaras.co.id/$1 [R=301,L]
+
+# Handle my links
+RewriteRule ^$ template.php?module=home&id=1 [L]
+RewriteRule ^new-arrivals$ template.php?module=produk&view=new-arrivals&id=2 [L]
+RewriteRule ^best-seller$ template.php?module=produk&view=best-seller&id=3 [L]
+RewriteRule ^sale$ template.php?module=produk&view=sale&id=4 [L]
+RewriteRule ^all-products$ template.php?module=produk&view=all-products&id=5 [L]
+RewriteRule ^category$ template.php?module=produk&view=list-category&id=6 [L]
+
+RewriteRule ^category/([a-z0-9-]+)$ template.php?module=produk&view=detail-category&slug=$1 [L]
+RewriteRule ^search$ template.php?module=produk&view=search [L]
+RewriteRule ^product/([a-z0-9-]+)/([a-z0-9-]+)$ template.php?module=produk&view=detail&slug-kat=$1&slug=$2 [L]
+
+
+RewriteRule ^how-to-order$ template.php?module=pages&view=how-to-order&id=7 [L]
+RewriteRule ^payment-method$ template.php?module=pages&view=payment-method&id=8 [L]
+RewriteRule ^about-us$ template.php?module=pages&view=about-us&id=10 [L]
+
+
+RewriteRule ^blog$ template.php?module=blog&view=list&id=9 [L]
+RewriteRule ^blog/([a-z0-9-]+)$ template.php?module=blog&view=detail&slug=$1 [L]
+
+
+RewriteRule ^dataAllProducts$ appweb/Controllers/dataAllProducts.php [L]
+RewriteRule ^dataNewArrivals$ appweb/Controllers/dataNewArrivals.php [L]
+RewriteRule ^dataBestSeller$ appweb/Controllers/dataBestSeller.php [L]
+RewriteRule ^dataSale$ appweb/Controllers/dataSale.php [L]
+RewriteRule ^dataAllProductsV2$ appweb/Controllers/dataAllProductsV2.php [L]
+RewriteRule ^dataSearch$ appweb/Controllers/dataSearch.php [L]
+RewriteRule ^dataBlog$ appweb/Controllers/dataBlog.php [L]
+
+RewriteRule ^404$ appweb/Views/404.php [L]
+
+# Deny access to htaccess
+<files .htaccess>
+    order allow,deny
+    deny from all
+</files>
+
+# Not Found
+ErrorDocument 404 /appweb/Views/404.php
+# Forbidden
+ErrorDocument 403 /appweb/Views/403.php
+# Internal Server Error
+ErrorDocument 500 /appweb/Views/500.php
+# Bad Request
+ErrorDocument 400 /appweb/Views/400.php
+# Unauthorised
+ErrorDocument 401 /appweb/Views/401.php

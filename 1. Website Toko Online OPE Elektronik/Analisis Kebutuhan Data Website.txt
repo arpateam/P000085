@@ -1,0 +1,54 @@
+Analisis Kebutuhan Data Website
+
+1. HASIL MEETING DENGAN KLIEN
+	a) OPE Elektronik
+	b) Jual Laptop, Kamera, & Lensa di Jogja
+
+2. ANALSISI KEBUTUHAN WEBSITE
+	a) Kebutuhan Utama
+		- Contoh Web Yang Akan Dibuat: www.gudangdigitalonline.com
+		- Nama Web: OPE Elektronik
+		- Slogan: Toko Laptop, Kamera, & Lensa Baru dan Secound di Jogja
+	b) Kebutuhan Fitur: Buat landingpage saja
+		- Menampilkan Katalog Produk
+			> Nama Produk
+			> Harga
+			> Pemesanan mengarah ke WhatsApp
+	c) Kebutuhan Teknologi
+		- Menggunakan Bootstrtap 5
+		- FontAwesome 6
+		- AOS
+	d) Warna
+		- Ungu: #9D1C66;
+		- Hitam: #050505;
+
+3. ANALISIS KEBUTUHAN HALAMAN WEBSITE
+	a) Halaman Utama
+		- Home
+			> Header
+			> Tentang Kami
+			> Produk
+			> Footer
+			> Berisi nomornya Mas Renald Saja
+
+4. ANALISIS KEBUTUHAN DATABASE
+	a) data_admin
+	b) pengaturan
+	c) sub_sitemap
+	d) sitemap
+	e) kat_produk
+		- id_kat_produk
+		- judul
+		- slug
+		- tgl_update
+		- id_sitemap
+	f) produk
+		- id_produk
+		- id_kat_produk
+		- judul
+		- harga
+		- deskripsi
+		- gambar
+		- slug
+		- tgl_update
+		- id_sitemap

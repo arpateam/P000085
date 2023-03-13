@@ -1,0 +1,87 @@
+## Turn on rewrite engine
+RewriteEngine on
+Options -Indexes +FollowSymLinks
+
+# Remove trailing slash from non-filepath urls
+#RewriteCond %{REQUEST_URI} /(.+)/$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ https://www.localhost/project/P000062/%1 [R=301,L]
+
+# Include trailing slash on directory 
+#RewriteCond %{REQUEST_URI} !(.+)/$
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^(.+)$ https://www.localhost/project/P000062/$1/ [R=301,L]
+
+# Force HTTPS and WWW 
+#RewriteCond %{HTTP_HOST} !^www\.(.*)$ [OR,NC]
+#RewriteCond %{https} off  
+#RewriteRule ^(.*)$ https://www.localhost/project/P000062/$1 [R=301,L]
+
+##### Handle my links ###############################
+
+RewriteRule ^$ login.php [L]
+RewriteRule ^masuk$ login.php [L]
+RewriteRule ^keluar-admin$ logout.php [L]
+RewriteRule ^keluar-edit$ logout-edit.php [L]
+
+RewriteRule ^dashboard$ template.php?module=dashboard [L]
+
+RewriteRule ^page/beranda$ template.php?module=halaman&id=1 [L]
+RewriteRule ^page/produk$ template.php?module=halaman&id=2 [L]
+RewriteRule ^page/kontak-kami$ template.php?module=halaman&id=3 [L]
+
+RewriteRule ^editPage$ appweb/Controllers/Pages.php?act=edit [L]
+
+RewriteRule ^produk$ template.php?module=produk&act=kat-produk [L]
+RewriteRule ^produk/([a-z0-9-]+)$ template.php?module=produk&act=list&kat_slug=$1 [L]
+RewriteRule ^produk/([a-z0-9-]+)/([a-z0-9-]+)$ template.php?module=produk&act=edit-produk&kat_slug=$1&slug=$2 [L]
+
+RewriteRule ^addKatProduk$ appweb/Controllers/Produk.php?act=add-kat-produk [L]
+RewriteRule ^editKatProduk$ appweb/Controllers/Produk.php?act=edit-kat-produk [L]
+
+RewriteRule ^addProduk$ appweb/Controllers/Produk.php?act=add-produk [L]
+RewriteRule ^editProduk$ appweb/Controllers/Produk.php?act=edit-produk [L]
+RewriteRule ^actionDeleteProduk/([0-9]+)/([a-z0-9-]+)$ appweb/Controllers/Produk.php?act=delete-produk&id=$1&slug=$2 [L]
+
+RewriteRule ^pengaturan$ template.php?module=pengaturan&act=daftar-pengaturan [L]
+RewriteRule ^editPengaturan$ appweb/Controllers/Settings.php?act=edit-pengaturan [L]
+
+RewriteRule ^sitemap$ template.php?module=sitemap&act=sitemap [L]
+RewriteRule ^sitemap/([a-z0-9-]+)$ template.php?module=sitemap&act=daftar-sitemap&slug=$1 [L]
+
+RewriteRule ^addSitemap$ appweb/Controllers/Sitemap.php?act=add-sitemap [L]
+RewriteRule ^editSitemap$ appweb/Controllers/Sitemap.php?act=edit-sitemap [L]
+RewriteRule ^actionDeleteSitemap/([0-9]+)/([a-z0-9-]+)$ appweb/Controllers/Sitemap.php?act=delete-sitemap&id=$1&slug=$2 [L]
+
+RewriteRule ^pegawai$ template.php?module=pegawai&act=daftar-pegawai [L]
+RewriteRule ^pegawai/([0-9]+)$ template.php?module=pegawai&act=detail-pegawai&id=$1 [L]
+RewriteRule ^pegawai/profil$ template.php?module=pegawai&act=profil&id=$1 [L]
+
+RewriteRule ^addPegawai$ appweb/Controllers/Pegawai.php?act=add-pegawai [L]
+RewriteRule ^editPegawai$ appweb/Controllers/Pegawai.php?act=edit-pegawai [L]
+RewriteRule ^editPassword$ appweb/Controllers/Pegawai.php?act=edit-password [L]
+RewriteRule ^editProfil$ appweb/Controllers/Pegawai.php?act=edit-profil [L]
+RewriteRule ^editPasswordProfil$ appweb/Controllers/Pegawai.php?act=edit-password-profil [L]
+RewriteRule ^aktifkanPegawai/(.*)$ appweb/Controllers/Pegawai.php?act=aktifkan-pegawai&id=$1 [L]
+RewriteRule ^nonAktifkanPegawai/(.*)$ appweb/Controllers/Pegawai.php?act=non-aktifkan-pegawai&id=$1 [L]
+RewriteRule ^resetSession$ appweb/Controllers/Pegawai.php?act=reset-session [L]
+
+RewriteRule ^ImgHandlingFroala$ appweb/Controllers/FroalaImgHandling.php [L]
+RewriteRule ^FileHandlingFroala$ appweb/Controllers/FroalaFileHandling.php [L]
+
+##### Deny access to htaccess ###############################
+<files .htaccess>
+    order allow,deny
+    deny from all
+</files>
+
+##### Not Found ###############################
+ErrorDocument 404 /appweb/Views/404.php
+##### Forbidden ###############################
+ErrorDocument 403 /appweb/Views/403.php
+##### Internal Server Error
+ErrorDocument 500 /appweb/Views/500.php
+##### Bad Request ###############################
+ErrorDocument 400 /appweb/Views/400.php
+##### Unauthorised ###############################
+ErrorDocument 401 /appweb/Views/401.php

@@ -1,0 +1,4 @@
+MENYERAHKAN PROGRAM KE #ARPATEAM
+Setelah melakukan testing website, berikutnya saya diperintahkan untuk mengirim hasil program yang saya buat ini ke pihak #ARPATEAM yang nantinya website ini akan di onlinekan.
+
+Website ini dapat diakses di laman https://www.opeelektronik.my.id
